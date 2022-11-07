@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "279b5d70-b50a-42b2-a39b-8468dc5bc74c",
+		"name": "request STOCK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24172655"
+	},
+	"item": [
+		{
+			"name": "ADD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/add?id=&producto=&cantidad=&precio=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"add"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": ""
+						},
+						{
+							"key": "producto",
+							"value": ""
+						},
+						{
+							"key": "cantidad",
+							"value": ""
+						},
+						{
+							"key": "precio",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/delete/102",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delete",
+						"102"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
