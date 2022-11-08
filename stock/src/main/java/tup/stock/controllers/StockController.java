@@ -24,14 +24,27 @@ public class StockController {
 /*Luego están declaradas las anotaciones @PostMapping(“/add”) y (“/delete/{id}”) para agregar y o eliminar un producto, lo cual se realiza a travez del POSTMAN ya que es un Post; como asi también @GetMapping (“/id”) y (“/all”) para poder visualizar un producto especifico o toda la tabla, con su correspondiente declaración de HTML que le da un estilo de visualización. Y al final de la clase un @GetMapping(“”) el cual esta vacion y al no poner nada luego del 8080 en el browser le dará un mensaje de bienvenida al usuario.  */
   @PostMapping("/add") 
   
-  public String addNewUser(@RequestParam String producto, @RequestParam String cantidad, @RequestParam String precio) {
+  public String addNewUser(@RequestParam Long id, @RequestParam String producto, @RequestParam String cantidad, @RequestParam String precio) {
 
     Stock user = new Stock();
+    user.setId(id);
     user.setProducto(producto);
     user.setCantidad(cantidad);
     user.setPrecio(precio);
     userRepository.save(user);
     return "Se grabó el nuevo producto.";
+  }
+  @PostMapping("/edit") 
+  
+  public String editUser(@RequestParam Long id, @RequestParam String producto, @RequestParam String cantidad, @RequestParam String precio) {
+
+    Stock user = new Stock();
+    user.setId(id);
+    user.setProducto(producto);
+    user.setCantidad(cantidad);
+    user.setPrecio(precio);
+    userRepository.save(user);
+    return "Se edito el producto.";
   }
 
   @PostMapping("/delete/{id}") // Map ONLY POST Requests
@@ -100,10 +113,9 @@ public class StockController {
             #users {
               font-family: Arial, Helvetica, sans-serif;
               border-collapse: collapse;
-              width: auto;
-              margen-left: 20%;
-              margen-right: 20%;
-            
+              width: 70%;
+              justify-content: center;
+              align-items: center;
 
             }
             #users td, #users th {

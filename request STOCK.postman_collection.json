@@ -62,6 +62,43 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "EDIT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/edit?id=101&producto=TORNILLO&cantidad=150&precio=13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"edit"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "101"
+						},
+						{
+							"key": "producto",
+							"value": "TORNILLO"
+						},
+						{
+							"key": "cantidad",
+							"value": "150"
+						},
+						{
+							"key": "precio",
+							"value": "13"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

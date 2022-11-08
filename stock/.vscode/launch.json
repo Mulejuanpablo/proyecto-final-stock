@@ -2,12 +2,12 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Spring Boot-SimpleApplication<simple>",
+            "name": "Spring Boot-StockFerreteriaApplication<stock>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
-            "mainClass": "tup.simple.SimpleApplication",
-            "projectName": "simple",
+            "mainClass": "tup.stock.StockFerreteriaApplication",
+            "projectName": "stock",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
